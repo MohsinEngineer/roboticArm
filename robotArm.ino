@@ -100,7 +100,7 @@ void setup()
     setStepperEnable(false);
   }
   Serial.println("start");
-  interpolator.setInterpolation(0, 19.5, 100, 0, 0, 19.5, 100, 0); // initial position is actual home position
+  interpolator.setInterpolation(0, 16, 126, 0, 0, 16, 126, 0); // initial position is actual home position
 
   pinMode(Y_MIN_PIN, INPUT_PULLUP);
   pinMode(X_MIN_PIN, INPUT_PULLUP);
@@ -506,8 +506,8 @@ void GoHome()
 
   cmdStepperOn(); // M17 Gcode (Power on All Steppers)
 
-  interpolator.setInterpolation(0, 19.5, 100, 0, 0, 19.5, 100, 0); //Set Home Position to again X0 Y19.5 Z134 // SR: Changed for endstop position
-  interpolator.setCurrentPos(0, 19.5, 100, 0);
+  interpolator.setInterpolation(0, 16, 126, 0, 0, 16, 126, 0); //Set Home Position to again X0 Y16 Z126 // SR: Changed for endstop position
+  interpolator.setCurrentPos(0, 16, 126, 0);
   interpolator.updateActualPosition();
   printComment("Homing Completed...");
 
