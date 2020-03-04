@@ -44,8 +44,8 @@ long time;
 
 // for Homing
 const int Z_HomeStep = 2850;        // 2850 step to Home Rotation Stepper... rotate back CW after touching Z-min switch (to set Robotic arm rotation to 0 Degree)
-bool home_on_boot = false;          // set it false if you not want to Home the robotic arm automatically during Boot.
-bool home_rotation_stepper = true; // enable it (set to true) if you want to home rotation stepper too... it requires end-switch mounted on rotation and attached to Z-min pin on RAMPS
+bool home_on_boot = true;          // set it false if you not want to Home the robotic arm automatically during Boot.
+bool home_rotation_stepper = false; // enable it (set to true) if you want to home rotation stepper too... it requires end-switch mounted on rotation and attached to Z-min pin on RAMPS
 const int MaxDwell = 1200;
 const int OffDwell = 80; // Main stepper OFF-delay= 40minimum ; normal=80 ; base rotation needed more time
 int On_Dwell = MaxDwell; // Main stepper ON-delay= 120minimum ; normal=480; Home speed=600
